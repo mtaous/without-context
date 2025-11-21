@@ -6,8 +6,8 @@ This module handles writing inactive user logs to the database.
 
 import sqlite3
 from typing import List, Dict, Any
-from datetime import datetime
-from .constants import TABLE_INACTIVE_LOG, CATEGORY_INACTIVE, ERROR_CODE_DATABASE_ERROR
+from datetime import datetime, timezone
+from .constants import TABLE_INACTIVE_LOG, TABLE_USERS, CATEGORY_INACTIVE, ERROR_CODE_DATABASE_ERROR
 
 
 class DatabaseWriterError(Exception):
@@ -48,7 +48,7 @@ class DatabaseWriter:
                     last_login TEXT,
                     days_since_login INTEGER,
                     logged_at TEXT NOT NULL,
-                    FOREIGN KEY (user_id) REFERENCES {TABLE_INACTIVE_LOG}(user_id)
+                    FOREIGN KEY (user_id) REFERENCES {TABLE_USERS}(user_id)
                 )
             """)
             self.db_connection.commit()
@@ -70,7 +70,7 @@ class DatabaseWriter:
         """
         try:
             cursor = self.db_connection.cursor()
-            logged_at = datetime.utcnow().isoformat()
+            logged_at = datetime.now(timezone.utc).isoformat()
             
             last_login_str = last_login.isoformat() if last_login else None
             
