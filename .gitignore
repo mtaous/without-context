@@ -1,46 +1,32 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Genero BDL compiled files
+*.42m
+*.42f
+*.42r
+*.42s
 
-# Virtual environments
-venv/
-ENV/
-env/
+# Object files
+*.o
+*.obj
 
-# IDE
+# Executables
+*.exe
+*.out
+
+# Genero runtime files
+*.log
+*.err
+
+# Database files
+*.db
+*.dbs
+
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,22 @@
+-- constants.4gl
+-- Constants module for User Activity Analyzer
+-- Defines all constants used throughout the application
+
+-- Category labels for user activity status
+CONSTANT CATEGORY_ACTIVE = "ACTIVE"
+CONSTANT CATEGORY_DORMANT = "DORMANT"
+CONSTANT CATEGORY_INACTIVE = "INACTIVE"
+
+-- Time thresholds in days
+CONSTANT THRESHOLD_ACTIVE_DAYS = 7
+CONSTANT THRESHOLD_DORMANT_DAYS = 30
+
+-- SQL table names
+CONSTANT TABLE_USERS = "users"
+CONSTANT TABLE_INACTIVE_LOG = "inactive_log"
+
+-- Error codes
+CONSTANT ERROR_CODE_DATABASE_ERROR = "DB_001"
+CONSTANT ERROR_CODE_VALIDATION_ERROR = "VAL_001"
+CONSTANT ERROR_CODE_INVALID_DATE = "DATE_001"
+CONSTANT ERROR_CODE_USER_NOT_FOUND = "USER_001"
