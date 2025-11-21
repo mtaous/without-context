@@ -1,0 +1,32 @@
+# Genero BDL compiled files
+*.42m
+*.42f
+*.42r
+*.42s
+
+# Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+
+# Genero runtime files
+*.log
+*.err
+
+# Database files
+*.db
+*.dbs
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
